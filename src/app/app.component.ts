@@ -1,13 +1,39 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { FirstMilestoneComponent } from './components/first-milestone/first-milestone.component';
+import { SecondMilestoneComponent } from './components/second-milestone/second-milestone.component';
+import { ThirdMilestoneComponent } from './components/third-milestone/third-milestone.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [
+    CommonModule,
+    FirstMilestoneComponent,
+    SecondMilestoneComponent,
+    ThirdMilestoneComponent
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'VirtualMouse';
+  title = 'Virtual Mouse';
+
+  // Változó a megjelenített komponenshez
+  currentComponent = 'first';
+
+  // Tab változtatás kezelése
+  onTabChange(index: number): void {
+    switch (index) {
+      case 0:
+        this.currentComponent = 'first';
+        break;
+      case 1:
+        this.currentComponent = 'second';
+        break;
+      case 2:
+        this.currentComponent = 'third';
+        break;
+    }
+  }
 }
