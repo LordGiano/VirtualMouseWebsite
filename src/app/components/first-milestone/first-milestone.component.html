@@ -1,0 +1,84 @@
+<div class="container">
+  <h1>Az algoritmus megalkotása a feladat követelményei alapján</h1>
+
+  <section class="introduction">
+    <h2>Bevezetés</h2>
+    <p>
+      Az alábbi projekt a Szegedi Tudományegyetem 2024/2025-ös tanév első félévében meghirdetett
+      Számítógépes látás kurzus kötelező feladataként készült. A csapat tagjai:
+    </p>
+    <ul>
+      <li>Aradi Ferenc Zoltán</li>
+      <li>Szabó Norbert</li>
+      <li>Zsurzsa Dóra</li>
+    </ul>
+  </section>
+
+  <section class="overview">
+    <h2>Projekt áttekintése</h2>
+    <p>
+      A Virtuális Egér projekt célja egy olyan rendszer megvalósítása, amely képes valós időben
+      értelmezni a kéz- és ujjmozdulatokat kameraképből, majd ezeket egér eseményekké alakítani. A projekt központi eleme a
+      CONDENSATION algoritmus, amely megbízhatóan követi az ujjmozgásokat zajos és változó környezetben is.
+    </p>
+  </section>
+
+  <section class="tools">
+    <h2>Felhasznált Eszközök</h2>
+    <ul>
+      <li><strong>Programnyelv:</strong> Python</li>
+      <li><strong>Python könyvtárak:</strong>
+        <ul>
+          <li>OpenCV: Képfeldolgozásra és számítógépes látás feladatokra.</li>
+          <li>MediaPipe: Egyszerű és gyors kéz- és ujjkövetés valós időben.</li>
+          <li>PyAutoGUI: Egér események szimulálásához.</li>
+        </ul>
+      </li>
+      <li><strong>Fejlesztőkörnyezet:</strong> PyCharm vagy Visual Studio Code</li>
+    </ul>
+  </section>
+
+  <section class="algorithm">
+    <h2>Algoritmus – Matematikai Megközelítés</h2>
+    <p>
+      A kéz és ujj érzékeléséhez a HSV színtérre alapozott szegmentációt használjuk, amely
+      megbízhatóbb az RGB színtérnél, mivel kevésbé érzékeny a megvilágítás változásaira.
+      Az ujjak felismerésére a konvex burkolat és konvexitási hibák elemzését alkalmazzuk. Az
+      ujjkövetést a CONDENSATION algoritmus biztosítja, amely zajos környezetben is pontos eredményt nyújt.
+    </p>
+    <h2>Részletes Pszeudokód</h2>
+    <ol>
+      <li><strong>Kamera inicializálása:</strong> A program elindításakor a kamera inicializálása történik a valós idejű képkockák feldolgozásához.</li>
+      <li><strong>Kép átalakítása HSV színtérbe:</strong> Az RGB képet HSV színtérbe konvertáljuk a kéz bőrszínének pontosabb detektálása érdekében.</li>
+      <li><strong>Színküszöbölés a kéz szegmentálására:</strong> A bőrszín tartományt meghatározva szegmentáljuk a kéz területét a háttértől.</li>
+      <li><strong>Gauss szűrés a zaj csökkentése érdekében:</strong> A szegmentált képen Gauss szűrést alkalmazunk a zajok eltávolítására és a kontúrok kisimítására.</li>
+      <li><strong>Kontúrok keresése:</strong> A szegmentált képen az OpenCV segítségével megtaláljuk az összes kontúrt.</li>
+      <li><strong>Legnagyobb kontúr kiválasztása:</strong> A kéz kontúrja általában a legnagyobb objektum, amelyet kiválasztunk további feldolgozásra.</li>
+      <li><strong>Konvex burkolat és konvexitási hibák keresése:</strong> A kéz konvex burkolatának és konvexitási hibáinak meghatározása, amelyek segítenek az ujjak csúcsainak azonosításában.</li>
+      <li><strong>Kurzormozgató-ujj meghatározása:</strong> A legmagasabb csúcsot azonosítjuk, amely a kéz centroidjától legtávolabb esik, ez lesz a kurzormozgató-ujj.</li>
+      <li><strong>CONDENSATION algoritmus elindítása:</strong> A részecske-alapú követési algoritmus biztosítja az ujj pontos követését zajos környezetben is.</li>
+      <li><strong>Mozgás alapján az egér kurzor mozgatása:</strong> A kurzormozgató-ujj mozgása alapján a program irányítja az egér kurzorát.</li>
+      <li><strong>Érintési események alapján kattintások szimulálása:</strong> Az érintési gesztusok bal vagy jobb kattintási eseményekké alakulnak.</li>
+      <li><strong>Folyamat ismétlése minden képkockánál:</strong> A fenti lépéseket minden beérkező képkockánál megismételjük.</li>
+      <li><strong>Kilépés kezelése:</strong> Ha a felhasználó például a 'Q' billentyűt megnyomja, a program biztonságosan leáll.</li>
+    </ol>
+  </section>
+
+  <section class="mouse-events">
+    <h2>Egér Események Szimulálása</h2>
+    <p>
+      A kurzormozgató-ujj mozgása alapján történik az egér kurzor mozgatása, míg az érintési események
+      bal vagy jobb kattintást szimulálnak. A PyAutoGUI könyvtárat használjuk ezen események
+      implementálására.
+    </p>
+  </section>
+
+  <section class="conclusion">
+    <h2>Következtetések</h2>
+    <p>
+      A Virtuális Egér projekt megmutatta, hogy a számítógépes látás eszközeivel hatékonyan lehet kéz- és
+      ujjmozdulatokat értelmezni. A HSV színtér, a konvex burkolat, és a CONDENSATION algoritmus
+      integrált használata megbízható és pontos működést biztosított.
+    </p>
+  </section>
+</div>

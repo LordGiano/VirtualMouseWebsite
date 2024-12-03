@@ -1,0 +1,103 @@
+<div class="container">
+  <h1>Mediapipe-os Megoldás</h1>
+
+  <section class="solution">
+    <h2>Mediapipe-os Megoldás</h2>
+    <p>
+      A Mediapipe segítségével stabil környezetben, szemből vagy felülnézeti kamerabeállítással meghatározhatóak a kéz landmarkjai.
+      A landmarkok alapján egy téglalap kerül meghatározásra a csukló, a hüvelykujj, a mutatóujj és a kisujj csatlakozási pontjai alapján.
+      A tenyér középpontját ebből számoljuk ki, amely az egérmozgás alapja. A kattintások az ujjak landmarkjainak mozgásával történnek:
+    </p>
+    <ul>
+      <li><strong>Bal kattintás:</strong> A mutatóujj behajtása esetén.</li>
+      <li><strong>Jobb kattintás:</strong> A középső ujj behajtása esetén.</li>
+    </ul>
+    <p>
+      A rendszer a tenyér befoglaló téglalapjának segítségével határozza meg, ha egy ujj a téglalapon belülre kerül, így azonosítva a kattintást.
+    </p>
+  </section>
+
+  <section class="testing">
+    <h2>Mediapipe-os Megoldás Tesztelése</h2>
+    <p>
+      A tesztelési folyamat során a Mediapipe által biztosított kézdetektálás különböző körülmények között került értékelésre:
+    </p>
+    <ul>
+      <li><strong>Alacsony megvilágítás:</strong> Csökkent pontosság és zajos detektálás.</li>
+      <li><strong>Alacsony felbontás:</strong> Pontatlan és zajos eredmények extrém körülmények között.</li>
+      <li><strong>Fals detektálás:</strong> Zavaró objektumok, mint kesztyűk vagy piktogramok, néha hibás detektálást okoztak.</li>
+      <li><strong>Kéz kilógása:</strong> A kéz ujjainak kilógása problémát jelentett a kurzor pontos vezérlésében.</li>
+    </ul>
+  </section>
+
+  <section class="test-cases">
+    <h2>Tesztesetek</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Teszt eset</th>
+          <th>Kép</th>
+          <th>Leírás</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1. Nem felismerhető kéz</td>
+          <td><img src="images/nincs_kez.png" alt="Nem felismerhető kéz teszteset" /></td>
+          <td>A rendszer nem hajt végre műveletet, ha nem található kéz a képen.</td>
+        </tr>
+        <tr>
+          <td>2. Több kéz</td>
+          <td><img src="images/tobb_kez.png" alt="Több kéz teszteset" /></td>
+          <td>Csak az egyik kéz vezérli a kurzort (max. 1 kéz detektálható).</td>
+        </tr>
+        <tr>
+          <td>3. Gyors mozdulatok</td>
+          <td><img src="images/gyors_kezmozdulat.png" alt="Gyors mozdulatok teszteset" /></td>
+          <td>Kis késések tapasztalhatóak gyors mozdulatok esetén.</td>
+        </tr>
+        <tr>
+          <td>4. Megvilágítás változása</td>
+          <td><img src="images/megvilagitas_valtozasa.png" alt="Megvilágítás változása teszteset" /></td>
+          <td>Gyenge fényviszonyok rontják a felismerés pontosságát.</td>
+        </tr>
+        <tr>
+          <td>5. Zavaró háttér</td>
+          <td><img src="images/kulonbozo_hatter.png" alt="Zavaró háttér teszteset" /></td>
+          <td>Zavaró objektumok fals detektálást eredményezhetnek.</td>
+        </tr>
+        <tr>
+          <td>6. Kéz kilógása</td>
+            <td>
+              <a href="https://youtu.be/3PzBXB_jomY" target="_blank">Kilógó kéz videó</a>
+            </td>
+            <td>A kurzor vezérlése nehézkessé válik, ha a kéz kilóg a képből.</td>
+          </tr>
+          <tr>
+            <td>7. Eltakarás</td>
+            <td>
+              <a href="https://youtu.be/27lpUhSByes" target="_blank">Eltakarás videó</a>
+            </td>
+            <td>Részleges eltakarás esetén a felismerés pontatlan lehet.</td>
+          </tr>
+        <tr>
+          <td>8. Nem szabványos kéztartás</td>
+          <td><img src="images/nem_szabvanyos_keztartas.png" alt="Nem szabványos kéztartás teszteset" /></td>
+          <td>Bizonyos gesztusokat nem ismer fel a rendszer.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="improvements">
+    <h2>Javítási lehetőségek</h2>
+    <p>
+      A következő fejlesztési javaslatokkal a rendszer tovább javítható:
+    </p>
+    <ul>
+      <li>A képet körbevágva a befoglaló téglalap méretének megfelelően könnyebb lenne elérni a képernyő széleit.</li>
+      <li>A detektálási konfidenciaintervallumok finomhangolása javíthatja a pontosságot zavaros környezetekben.</li>
+      <li>A kalibráció lehetőséget adna az egyedi beállításokra, de növelheti a felhasználói hibák esélyét.</li>
+    </ul>
+  </section>
+</div>
