@@ -54,3 +54,26 @@
   padding: 8px 0;
   border-top: 1px solid #ddd;
 }
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 16px; /* Távolság a linkek között */
+  margin: 16px 0; /* Térköz a linkek és a cím/tabs között */
+}
+
+.links a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.links a:hover {
+  background-color: #0056b3;
+  color: white;
+}

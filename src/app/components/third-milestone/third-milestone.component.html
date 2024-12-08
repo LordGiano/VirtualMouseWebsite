@@ -1,1 +1,116 @@
-<p>Tervezés alatt...</p>
+<div class="container">
+  <h1>Mediapipe megoldás kiegészítése</h1>
+
+  <section class="overview">
+    <h2>MediaPipe áttekintés</h2>
+    <p>
+      A MediaPipe egy nyílt forráskódú keretrendszer, amelyet a Google fejlesztett ki valós idejű gépi tanulási modellek futtatására.
+      Széles körben alkalmazzák számítógépes látás, testtartás-követés, gesztusfelismerés és hangfeldolgozás területeken.
+    </p>
+  </section>
+
+  <section class="architecture">
+    <h2>MediaPipe architektúrája</h2>
+    <ul>
+      <li>
+        <strong>Gráf alapú feldolgozási architektúra:</strong> Irányított gráfként működik, ahol a csomópontok (Nodes) feldolgozási műveleteket végeznek,
+        az élek (Edges) pedig az adatáramlást biztosítják.
+      </li>
+      <li>
+        <strong>Könyvtárak és eszközök:</strong> Optimalizált algoritmusokat kínál TensorFlow Lite és más könyvtárak támogatásával.
+      </li>
+      <li>
+        <strong>Feldolgozó csövek (Pipelines):</strong> Valós idejű adatfeldolgozásra alkalmas, például arcdetektálásra vagy kézmozgások követésére.
+      </li>
+    </ul>
+  </section>
+
+  <section class="capabilities">
+    <h2>MediaPipe fő funkciói</h2>
+    <ul>
+      <li>Arcérzékelés (Face Detection)</li>
+      <li>Testtartás-követés (Pose Tracking)</li>
+      <li>Kézérzékelés (Hand Tracking)</li>
+      <li>Objektumkövetés (Object Detection & Tracking)</li>
+      <li>Döntéshozatali támogatás TensorFlow Lite-tal</li>
+    </ul>
+  </section>
+
+  <section class="advantages">
+    <h2>MediaPipe előnyei</h2>
+    <ul>
+      <li><strong>Valós idejű feldolgozás:</strong> Interaktív alkalmazásokhoz optimalizált.</li>
+      <li><strong>Pontos kéz landmarkok:</strong> 21 kéz landmark detektálása, ami pontos gesztusfelismerést tesz lehetővé.</li>
+      <li><strong>Hardverfüggetlenség:</strong> Hatékonyan működik CPU-alapú rendszereken is.</li>
+      <li><strong>Nyílt forráskód:</strong> Könnyen testreszabható és ingyenesen elérhető.</li>
+    </ul>
+  </section>
+
+  <section class="new-features">
+    <h2>Harmadik mérföldkő újdonságai</h2>
+    <ul>
+      <li><strong>Pontosabb ujjmozgás-érzékelés:</strong> Új funkciók, mint például a hüvelyk- és mutatóujj zárt helyzetének felismerése.</li>
+      <li><strong>Egérmozgás javítása:</strong> Fokozatos interpoláció a simább egérmozgás érdekében.</li>
+      <li><strong>Új gesztusok:</strong> Bal kattintás, jobb kattintás és dupla kattintás gesztusok bevezetése.</li>
+      <li><strong>DPI konfiguráció:</strong> Az egérérzékenység testreszabása a felhasználói preferenciák szerint.</li>
+      <li><strong>Kód modularizálása:</strong> Az egyes funkciók különálló modulokká szervezése az egyszerűbb karbantartás érdekében.</li>
+    </ul>
+    <img src="images/hand_landmarks.png" alt="MediaPipe kéz landmarkok" class="advantages-img">
+  </section>
+
+  <section class="comparison">
+    <h2>MediaPipe és alternatívák összehasonlítása</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Kritérium</th>
+          <th>MediaPipe</th>
+          <th>YOLO</th>
+          <th>Condensation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pontosság kéz landmarkokkal</td>
+          <td>Kiváló: 21 landmark</td>
+          <td>Csak bounding box</td>
+          <td>Nem támogatott</td>
+        </tr>
+        <tr>
+          <td>Real-time működés</td>
+          <td>Optimális CPU-alapú</td>
+          <td>Nagyobb erőforrásigény</td>
+          <td>Stabil, de számításigényes</td>
+        </tr>
+        <tr>
+          <td>Gesztusfelismerés</td>
+          <td>Beépített támogatás</td>
+          <td>Nem támogatott</td>
+          <td>Nem támogatott</td>
+        </tr>
+        <tr>
+          <td>Fejlesztési igény</td>
+          <td>Alacsony</td>
+          <td>Magas</td>
+          <td>Magas</td>
+        </tr>
+        <tr>
+          <td>Erőforrásigény</td>
+          <td>Alacsony</td>
+          <td>Magas</td>
+          <td>Közepes</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="conclusion">
+    <h2>Összegzés</h2>
+    <p>
+      Az új fejlesztések jelentősen növelik a MediaPipe alapú rendszer hatékonyságát:
+      pontosabb és stabilabb kézmozgás-felismerés, finomított egérmozgás, valamint bővített kattintási lehetőségek révén.
+      Az alkalmazás könnyebben karbantartható és használható, miközben robusztusabb működést biztosít valós idejű környezetekben.
+    </p>
+  </section>
+  <p></p>
+</div>

@@ -1,0 +1,91 @@
+.container {
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  color: #007bff;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  color: #0056b3;
+  margin-top: 16px;
+  font-size: 18px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+}
+
+p {
+  margin: 8px 0;
+  color: #333;
+}
+
+ul {
+  margin: 8px 0 16px 20px;
+  padding: 0;
+  list-style-type: disc;
+}
+
+ul li {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 16px;
+}
+
+table td {
+  font-size: 14px;
+  color: #333;
+}
+
+table td img {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.conclusion {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.conclusion p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.8;
+}
+
+.advantages-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 16px auto; /* Kép középre igazítása és távolság a tartalomtól */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
