@@ -104,6 +104,106 @@
     </table>
   </section>
 
+  <section class="test-cases">
+  <h2>Tesztesetek</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tesztelési terület</th>
+        <th>Részletek</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pontosság</td>
+        <td>
+          - A kurzor mozgása alapvetően pontos, de stabil kéztartás szükséges.<br>
+          - Dupla kattintás és kézfej becsukása esetén hibák léphetnek fel.<br>
+          - Kattintási pontosság: kisebb ugrálás tapasztalható.
+        </td>
+      </tr>
+      <tr>
+        <td>Teljesítmény</td>
+        <td>
+          - Minimális késés, jól használható.<br>
+          - Stabil képfrissítési sebesség különböző hardvereken.<br>
+          - Zajos háttér nem zavarja a működést.
+        </td>
+      </tr>
+      <tr>
+        <td>Környezeti feltételek</td>
+        <td>
+          - Gyenge és erős fényviszonyok mellett is stabil.<br>
+          - Különböző kamera szögekből jól működik, de oldalra fordított kézfejnél kattintási hibák jelentkezhetnek.
+        </td>
+      </tr>
+      <tr>
+        <td>Felhasználói interakció</td>
+        <td>
+          - A felhasználó könnyen eléri a képernyő minden részét.<br>
+          - Hosszabb használat fárasztó, a kattintások kényelmetlenek.
+        </td>
+      </tr>
+      <tr>
+        <td>Szélsőséges helyzetek</td>
+        <td>
+          - Részleges kéztakarás esetén az ujjpontok jól felismerhetők, de a kurzor ugrál.<br>
+          - Gyors mozdulatok esetén előfordulhatnak hibák.<br>
+          - Több kéz esetén az algoritmus fókuszváltása nem mindig megfelelő.
+        </td>
+      </tr>
+      <tr>
+        <td>Hibás bemenetek</td>
+        <td>
+          - Nem kézre hasonlító tárgyak nem okoznak hibás működést.<br>
+          - Kesztyű vagy kéz alakú minták esetén változó eredmények születtek.
+        </td>
+      </tr>
+      <tr>
+        <td>Rendszerstabilitás</td>
+        <td>
+          - Stabil működés különböző kamerákon és hardvereken.<br>
+          - Hibaelhárítás váratlan helyzetekben (pl. kamerakép hiánya).
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+    <!-- Képek -->
+    <div class="test-images">
+      <img src="images/gyenge_fenyviszonyok.png" alt="Gyenge fényviszonyok" />
+      <img src="images/hibas_kattintas.png" alt="Hibás kattintás" />
+      <img src="images/gumikesztyu.png" alt="Gumikesztyű" />
+      <img src="images/borkesztyu.png" alt="Bőrkesztyű" />
+    </div>
+</section>
+
+  <section class="analysis">
+  <h2>Eredmények elemzése</h2>
+  <h3>Erősségek:</h3>
+  <ul>
+    <li><strong>Pontosság és megbízhatóság:</strong> A MediaPipe pontosan felismeri a kéz- és ujjmozdulatokat különböző fényviszonyok és háttér mellett.</li>
+    <li><strong>Gyors feldolgozási idő:</strong> Valós idejű feldolgozás, ami interaktív alkalmazásokhoz is ideális.</li>
+    <li><strong>Testreszabhatóság:</strong> Az algoritmus könnyen adaptálható különböző követelményekhez.</li>
+    <li><strong>Platformfüggetlenség:</strong> Több platformon (Windows, Android, iOS) is használható.</li>
+  </ul>
+  <h3>Gyengeségek:</h3>
+  <ul>
+    <li><strong>Szűk látószögű problémák:</strong> Szűk látószögű kameráknál nehéz lehet a kéz teljes felismerése.</li>
+    <li><strong>Fényviszonyok hatása:</strong> Pontatlanság túl világos vagy sötét környezetben.</li>
+    <li><strong>Háttérzaj:</strong> Zajos háttér csökkentheti a pontosságot.</li>
+    <li><strong>Bőrárnyalatok felismerése:</strong> Bizonyos bőrárnyalatok esetén csökkent pontosság figyelhető meg.</li>
+  </ul>
+  <h3>Fejlesztési lehetőségek:</h3>
+  <ul>
+    <li><strong>Fényviszonyok javítása:</strong> Automatikus fényerő-beállítás a pontosság növelése érdekében.</li>
+    <li><strong>Diverse adatbázisok:</strong> Különböző bőrárnyalatokat tartalmazó adatbázisok használata.</li>
+    <li><strong>Deep Learning modellek integrálása:</strong> A pontosság és felismerési sebesség további növelése érdekében.</li>
+    <li><strong>Interakció bővítése:</strong> Több gesztus felismerése és közvetlen vezérlési lehetőségek biztosítása.</li>
+  </ul>
+</section>
+
+
   <section class="conclusion">
     <h2>Összegzés</h2>
     <p>

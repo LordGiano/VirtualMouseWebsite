@@ -42,7 +42,8 @@ table {
   margin-top: 16px;
 }
 
-table th, table td {
+table th,
+table td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
@@ -85,7 +86,96 @@ table td img {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 16px auto; /* Kép középre igazítása és távolság a tartalomtól */
+  margin: 16px auto;
   border: 1px solid #ddd;
   border-radius: 4px;
+}
+
+.analysis {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.analysis h2 {
+  color: #0056b3;
+  font-size: 18px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.analysis h3 {
+  font-size: 16px;
+  color: #333;
+  margin-top: 12px;
+}
+
+.analysis ul {
+  margin: 8px 0 16px 20px;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.analysis ul li {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+.test-cases {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.test-cases h2 {
+  color: #0056b3;
+  font-size: 18px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.test-cases table {
+  width: auto;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.test-cases table th,
+.test-cases table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.test-cases table th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 16px;
+}
+
+.test-cases table td {
+  font-size: 14px;
+  color: #333;
+}
+
+.test-images {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 16px;
+  gap: 16px;
+}
+
+.test-images img {
+  height: 300px;
+  width: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
